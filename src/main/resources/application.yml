@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    url: ${DATABASE_URL:jdbc:h2:mem:sentinel;MODE=PostgreSQL;DB_CLOSE_DELAY=-1}
+    username: ${DATABASE_USERNAME:sa}
+    password: ${DATABASE_PASSWORD:}
+  jpa:
+    hibernate.ddl-auto: update
+    open-in-view: false
+  h2.console.enabled: true
+springdoc.swagger-ui.path: /swagger-ui.html
+server.error.include-message: never
+logging.level.com.meridiantrust.sentinel: INFO
